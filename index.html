@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshad Chawra - ServiceNow Developer Resume</title>
+  <style>
+    /* Reset & Base */
+    *{box-sizing:border-box;margin:0;padding:0;}
+    
+    /* Screen styles */
+    @media screen {
+      .wrap{font-family:Arial,sans-serif;max-width:680px;margin:0 auto;padding:1rem;}
+      body{background:#f5f5f5;padding:1rem;}
+    }
+    
+    /* Shared styles (both screen and print) */
+    .hero{background:#534AB7;padding:1.5rem 1.75rem;border-radius:12px;}
+    .hero-name{font-size:26px;font-weight:700;color:#EEEDFE;letter-spacing:0.5px;}
+    .hero-role{font-size:12px;color:#AFA9EC;margin-top:3px;letter-spacing:1px;text-transform:uppercase;}
+    .hero-contact{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:12px;}
+    .hero-contact span{font-size:12px;color:#CECBF6;}
+    .hero-contact a{font-size:12px;color:#CECBF6;text-decoration:none;}
+    .yt-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#E24B4A;margin-right:5px;vertical-align:middle;}
+    .hero-tags-label{font-size:10px;color:#AFA9EC;letter-spacing:1px;text-transform:uppercase;margin-top:14px;margin-bottom:6px;}
+    .hero-tags{display:flex;flex-wrap:wrap;gap:6px;}
+    .htag{background:#3C3489;color:#CECBF6;font-size:11px;padding:3px 10px;border-radius:20px;}
+    .htag-soft{background:transparent;border:1px solid #534AB7;color:#AFA9EC;font-size:11px;padding:3px 10px;border-radius:20px;}
+    .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:1rem;}
+    .stat{background:#EEEDFE;border-radius:10px;padding:10px 8px;text-align:center;}
+    .stat-num{font-size:18px;font-weight:700;color:#3C3489;}
+    .stat-txt{font-size:10px;color:#534AB7;margin-top:1px;}
+    .stat-yt{background:#FCEBEB;}
+    .stat-yt .stat-num{color:#A32D2D;}
+    .stat-yt .stat-txt{color:#A32D2D;}
+    .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:1rem;margin-top:1rem;}
+    .left,.right{display:flex;flex-direction:column;gap:1rem;}
+    .card{background:#fff;border:1px solid #e8e8e8;border-radius:12px;padding:1rem 1.1rem;}
+    .sec-label{font-size:10px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;padding:3px 10px;border-radius:20px;margin-bottom:10px;display:inline-block;}
+    .purple-label{background:#EEEDFE;color:#534AB7;}
+    .teal-label{background:#E1F5EE;color:#0F6E56;}
+    .amber-label{background:#FAEEDA;color:#854F0B;}
+    .coral-label{background:#FAECE7;color:#993C1D;}
+    .green-label{background:#EAF3DE;color:#3B6D11;}
+    .pink-label{background:#FBEAF0;color:#993556;}
+    .red-label{background:#FCEBEB;color:#A32D2D;}
+    .pills{display:flex;flex-wrap:wrap;gap:5px;}
+    .skill-pill{background:#f4f4f4;border:1px solid #e0e0e0;border-radius:20px;font-size:11px;padding:3px 9px;color:#333;}
+    .award-pill{background:#FAEEDA;color:#854F0B;font-size:11px;padding:3px 9px;border-radius:20px;}
+    .sport-pill{background:#FAECE7;color:#993C1D;font-size:11px;padding:3px 9px;border-radius:20px;}
+    .exp-entry{margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid #f0f0f0;}
+    .exp-entry:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+    .exp-header{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;margin-bottom:2px;}
+    .exp-co{font-size:13px;font-weight:700;color:#222;}
+    .exp-date{font-size:11px;color:#888;font-weight:400;}
+    .exp-role{font-size:11.5px;color:#534AB7;font-weight:600;margin:2px 0 4px;}
+    .exp-desc{font-size:11.5px;color:#555;line-height:1.6;padding-left:4px;list-style-type:disc;margin-left:12px;}
+    .exp-desc li{margin-bottom:3px;}
+    .cert-compact{font-size:11.5px;color:#333;line-height:1.6;}
+    .cert-compact strong{color:#534AB7;}
+    .edu-item{margin-bottom:8px;}
+    .edu-item:last-child{margin-bottom:0;}
+    .edu-deg{font-size:12.5px;font-weight:600;color:#222;}
+    .edu-school{font-size:11.5px;color:#777;}
+    .yt-channel{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #f0f0f0;}
+    .yt-channel:last-child{border-bottom:none;padding-bottom:0;}
+    .yt-icon{width:28px;height:28px;background:#E24B4A;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .yt-icon-tri{width:0;height:0;border-top:5px solid transparent;border-bottom:5px solid transparent;border-left:9px solid #fff;margin-left:2px;}
+    .yt-name{font-size:12.5px;font-weight:700;color:#222;margin-bottom:2px;}
+    .yt-link{font-size:11px;color:#A32D2D;text-decoration:none;}
+    .yt-total{background:#E24B4A;border-radius:10px;padding:10px 12px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+    .yt-total-num{font-size:20px;font-weight:700;color:#fff;}
+    .yt-total-label{font-size:11px;color:#F09595;}
+    .about-text{font-size:12.5px;color:#555;line-height:1.65;}
+
+    /* PRINT STYLES */
+    @media print {
+      * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+      }
+      
+      @page {
+        size: A4;
+        margin: 1.2cm 1cm;
+      }
+      
+      body {
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      
+      .wrap {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      
+      /* Hero section */
+      .hero {
+        background: #534AB7 !important;
+        border-radius: 0 !important;
+        padding: 0.6rem 1rem !important;
+        margin-bottom: 0.4rem !important;
+        page-break-after: avoid !important;
+      }
+      
+      .hero-name {
+        font-size: 16pt !important;
+        color: #EEEDFE !important;
+      }
+      
+      .hero-role {
+        font-size: 7.5pt !important;
+        color: #AFA9EC !important;
+      }
+      
+      .hero-contact {
+        margin-top: 5px !important;
+        gap: 3px 10px !important;
+      }
+      
+      .hero-contact span, .hero-contact a {
+        font-size: 7.5pt !important;
+        color: #CECBF6 !important;
+      }
+      
+      .hero-tags-label {
+        font-size: 6.5pt !important;
+        margin-top: 5px !important;
+        margin-bottom: 3px !important;
+      }
+      
+      .htag {
+        background: #3C3489 !important;
+        color: #CECBF6 !important;
+        font-size: 6.5pt !important;
+        padding: 1.5px 5px !important;
+      }
+      
+      .htag-soft {
+        border: 1px solid #534AB7 !important;
+        color: #AFA9EC !important;
+        font-size: 6.5pt !important;
+        padding: 1.5px 5px !important;
+      }
+      
+      /* Stats */
+      .stat-row {
+        gap: 4px !important;
+        margin-top: 0.3rem !important;
+        margin-bottom: 0.3rem !important;
+        page-break-after: avoid !important;
+      }
+      
+      .stat {
+        background: #EEEDFE !important;
+        padding: 4px 3px !important;
+        border-radius: 4px !important;
+      }
+      
+      .stat-num {
+        font-size: 11pt !important;
+        color: #3C3489 !important;
+      }
+      
+      .stat-txt {
+        font-size: 5.5pt !important;
+        color: #534AB7 !important;
+      }
+      
+      .stat-yt {
+        background: #FCEBEB !important;
+      }
+      
+      .stat-yt .stat-num {
+        color: #A32D2D !important;
+      }
+      
+      .stat-yt .stat-txt {
+        color: #A32D2D !important;
+      }
+      
+      /* Body layout */
+      .body {
+        gap: 0.4rem !important;
+        margin-top: 0.3rem !important;
+      }
+      
+      .left, .right {
+        gap: 0.4rem !important;
+      }
+      
+      /* Cards */
+      .card {
+        border: 0.5px solid #999 !important;
+        border-radius: 4px !important;
+        padding: 0.4rem 0.5rem !important;
+        background: white !important;
+        page-break-inside: avoid !important;
+      }
+      
+      /* Section labels */
+      .sec-label {
+        font-size: 6.5pt !important;
+        padding: 1.5px 5px !important;
+        margin-bottom: 4px !important;
+        border-radius: 10px !important;
+      }
+      
+      .purple-label { background: #EEEDFE !important; color: #534AB7 !important; }
+      .teal-label { background: #E1F5EE !important; color: #0F6E56 !important; }
+      .amber-label { background: #FAEEDA !important; color: #854F0B !important; }
+      .coral-label { background: #FAECE7 !important; color: #993C1D !important; }
+      .green-label { background: #EAF3DE !important; color: #3B6D11 !important; }
+      .pink-label { background: #FBEAF0 !important; color: #993556 !important; }
+      .red-label { background: #FCEBEB !important; color: #A32D2D !important; }
+      
+      /* About text */
+      .about-text {
+        font-size: 7.5pt !important;
+        line-height: 1.35 !important;
+        color: #333 !important;
+      }
+      
+      /* YouTube section */
+      .yt-total {
+        background: #E24B4A !important;
+        padding: 4px 6px !important;
+        margin-bottom: 4px !important;
+        border-radius: 4px !important;
+      }
+      
+      .yt-total-num {
+        font-size: 11pt !important;
+        color: white !important;
+      }
+      
+      .yt-total-label {
+        font-size: 6pt !important;
+        color: #F09595 !important;
+      }
+      
+      .yt-icon {
+        width: 16px !important;
+        height: 16px !important;
+        background: #E24B4A !important;
+      }
+      
+      .yt-icon-tri {
+        border-top: 3px solid transparent !important;
+        border-bottom: 3px solid transparent !important;
+        border-left: 5px solid white !important;
+      }
+      
+      .yt-name {
+        font-size: 8pt !important;
+      }
+      
+      .yt-link {
+        font-size: 6.5pt !important;
+        color: #A32D2D !important;
+      }
+      
+      .yt-channel {
+        padding: 3px 0 !important;
+      }
+      
+      /* Experience */
+      .exp-header {
+        margin-bottom: 1px !important;
+      }
+      
+      .exp-co {
+        font-size: 8.5pt !important;
+        color: #111 !important;
+      }
+      
+      .exp-date {
+        font-size: 6.5pt !important;
+        color: #666 !important;
+      }
+      
+      .exp-role {
+        font-size: 7.5pt !important;
+        color: #534AB7 !important;
+        margin: 1px 0 2px !important;
+      }
+      
+      .exp-desc {
+        font-size: 7pt !important;
+        line-height: 1.3 !important;
+        color: #333 !important;
+        margin-left: 10px !important;
+      }
+      
+      .exp-desc li {
+        margin-bottom: 1px !important;
+      }
+      
+      .exp-entry {
+        margin-bottom: 5px !important;
+        padding-bottom: 5px !important;
+        page-break-inside: avoid !important;
+      }
+      
+      /* Certifications - compact */
+      .cert-compact {
+        font-size: 7.5pt !important;
+        line-height: 1.4 !important;
+        color: #333 !important;
+      }
+      
+      .cert-compact strong {
+        color: #534AB7 !important;
+      }
+      
+      /* Education */
+      .edu-deg {
+        font-size: 8pt !important;
+      }
+      
+      .edu-school {
+        font-size: 7pt !important;
+      }
+      
+      .edu-item {
+        margin-bottom: 3px !important;
+      }
+      
+      /* Pills */
+      .skill-pill, .award-pill, .sport-pill {
+        font-size: 6.5pt !important;
+        padding: 1.5px 5px !important;
+        border-radius: 10px !important;
+      }
+      
+      .skill-pill {
+        background: #f4f4f4 !important;
+        border: 0.5px solid #ccc !important;
+        color: #333 !important;
+      }
+      
+      .award-pill {
+        background: #FAEEDA !important;
+        color: #854F0B !important;
+      }
+      
+      .sport-pill {
+        background: #FAECE7 !important;
+        color: #993C1D !important;
+      }
+      
+      /* Prevent page breaks */
+      .hero, .stat-row, .card, .exp-entry, .yt-channel, .edu-item {
+        page-break-inside: avoid !important;
+      }
+      
+      /* Hide YouTube play button icon in print if needed */
+      .yt-total div:last-child {
+        color: white !important;
+      }
+      
+      /* Force background colors everywhere */
+      .stat, .htag, .sec-label, .yt-total, .yt-icon, .award-pill, .sport-pill, .stat-yt {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-name">Harshad Chawra</div>
+    <div class="hero-role">ServiceNow Developer · 13+ Years Experience</div>
+    <div class="hero-contact">
+      <span>+91 85955 52607</span>
+      <span>Ballabgarh, Haryana</span>
+      <span><span class="yt-dot"></span><a href="https://www.youtube.com/@theBeastMastersDojo">@theBeastMastersDojo</a></span>
+      <span><span class="yt-dot"></span><a href="https://www.youtube.com/@CodeWiththeBeastMaster">@CodeWiththeBeastMaster</a></span>
+    </div>
+    <div class="hero-tags-label">Core expertise</div>
+    <div class="hero-tags">
+      <span class="htag">ITSM</span>
+      <span class="htag">CSM</span>
+      <span class="htag">EM</span>
+      <span class="htag">CMDB</span>
+      <span class="htag">Service Portal</span>
+      <span class="htag">Flow Designer</span>
+      <span class="htag">1000+ Integrations</span>
+    </div>
+    <div class="hero-tags-label" style="margin-top:10px;">Also familiar with</div>
+    <div class="hero-tags">
+      <span class="htag-soft">SAM</span>
+      <span class="htag-soft">HAM</span>
+      <span class="htag-soft">ITBM</span>
+    </div>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-num">13+</div>
+      <div class="stat-txt">Years experience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">9</div>
+      <div class="stat-txt">Mainline SN certs</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1000+</div>
+      <div class="stat-txt">Integrations built</div>
+    </div>
+    <div class="stat stat-yt">
+      <div class="stat-num">550k+</div>
+      <div class="stat-txt">YouTube views</div>
+    </div>
+  </div>
+
+  <div class="body">
+    <div class="left">
+
+      <div class="card">
+        <div class="sec-label purple-label">About</div>
+        <p class="about-text">B.Tech in ECE with 13+ years of specialised expertise in ServiceNow development. Core strengths in <strong>ITSM</strong>, <strong>CSM</strong> and <strong>EM</strong>, with deep hands-on experience in CMDB, Service Portal, Flow Designer and 1000+ custom integrations. Active ServiceNow content creator with <strong>550k+ total YouTube views</strong>, including single videos crossing 25k views.</p>
+      </div>
+
+      <div class="card">
+        <div class="sec-label red-label">YouTube channels</div>
+        <div class="yt-total">
+          <div>
+            <div class="yt-total-num">550k+ views</div>
+            <div class="yt-total-label">Total across both channels</div>
+          </div>
+          <div style="font-size:22px;color:#fff;">▶</div>
+        </div>
+        <div class="yt-channel">
+          <div class="yt-icon"><div class="yt-icon-tri"></div></div>
+          <div>
+            <div class="yt-name">theBeastMastersDojo</div>
+            <a class="yt-link" href="https://www.youtube.com/@theBeastMastersDojo">youtube.com/@theBeastMastersDojo</a>
+          </div>
+        </div>
+        <div class="yt-channel">
+          <div class="yt-icon"><div class="yt-icon-tri"></div></div>
+          <div>
+            <div class="yt-name">CodeWiththeBeastMaster</div>
+            <a class="yt-link" href="https://www.youtube.com/@CodeWiththeBeastMaster">youtube.com/@CodeWiththeBeastMaster</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label teal-label">Education</div>
+        <div class="edu-item">
+          <div class="edu-deg">B.Tech — Electronics &amp; Comm.</div>
+          <div class="edu-school">BSAITM College · 2009–2013 · 63.8%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">Higher Secondary</div>
+          <div class="edu-school">Tagore Academy · 2009 · 82.4%</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-deg">Matriculation</div>
+          <div class="edu-school">St. Anthony's Convent · 2007 · 78.8%</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label pink-label">Certifications</div>
+        <div class="cert-compact">
+          <strong>CSA</strong> · <strong>CAD</strong> · <strong>CIS</strong> — ITSM, SAM, HAM, VR, EM, SP, CMDB/CSDM
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label amber-label">Awards</div>
+        <div class="pills">
+          <span class="award-pill">Leaps &amp; Bounds</span>
+          <span class="award-pill">Shining Star</span>
+          <span class="award-pill">Digital Warrior</span>
+          <span class="award-pill">Pat on Back</span>
+          <span class="award-pill">Aspire High</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label coral-label">Sports</div>
+        <div class="pills">
+          <span class="sport-pill">Kickboxing — 3× National Champ</span>
+          <span class="sport-pill">Mixed Martial Arts</span>
+          <span class="sport-pill">Brazilian Jiu Jitsu</span>
+          <span class="sport-pill">Boxing</span>
+          <span class="sport-pill">Football</span>
+          <span class="sport-pill">100m — 11.3 sec</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sec-label green-label">Technical skills</div>
+        <div class="pills">
+          <span class="skill-pill">ServiceNow scripting</span>
+          <span class="skill-pill">Java</span>
+          <span class="skill-pill">jQuery</span>
+          <span class="skill-pill">Angular 2+</span>
+          <span class="skill-pill">Spring MVC</span>
+          <span class="skill-pill">Hibernate</span>
+          <span class="skill-pill">HTML / CSS / SQL</span>
+          <span class="skill-pill">Tomcat</span>
+          <span class="skill-pill">WebSphere</span>
+          <span class="skill-pill">Oracle 10g</span>
+          <span class="skill-pill">DB2</span>
+          <span class="skill-pill">IntelliJ</span>
+          <span class="skill-pill">Eclipse</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="right">
+
+      <div class="card">
+        <div class="sec-label purple-label">Experience</div>
+        
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-co">Thirdera / Cognizant</span>
+            <span class="exp-date">Oct 2021 – Present</span>
+          </div>
+          <div class="exp-role">Senior ServiceNow Developer & Team Lead</div>
+          <ul class="exp-desc">
+            <li>Led a team of 5 developers across multiple project tracks, ensuring high-quality delivery and adherence to best practices.</li>
+            <li>Orchestrated the end-to-end delivery of custom scoped applications, comprehensive CMDB health, and advanced integrations across ITSM, CSM, and EM.</li>
+            <li>Implemented advanced automation using Flow Designer and Now Assist for CSM to streamline case resolution and enhance agent productivity.</li>
+            <li>Developed custom Slack applications to enable bidirectional communication with the ServiceNow platform, improving operational response times.</li>
+            <li>Designed and deployed Virtual Agent conversations and Performance Analytics dashboards to provide actionable insights to leadership.</li>
+          </ul>
+        </div>
+        
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-co">Siemens Healthineers</span>
+            <span class="exp-date">Jun 2020 – Oct 2021</span>
+          </div>
+          <div class="exp-role">ServiceNow Developer</div>
+          <ul class="exp-desc">
+            <li>Engineered core ITSM process automation for Incident, Problem, and Change Management, including custom SLA frameworks and orchestration.</li>
+            <li>Led complex data migration initiatives, including the setup of robust data sources and execution of detailed data review and transformation rules.</li>
+            <li>Extended platform capabilities by implementing and configuring CSM and ITBM modules alongside core Service Portal enhancements.</li>
+            <li>Developed custom Performance Analytics reports to track key operational metrics and identify trends in platform health.</li>
+            <li>Conducted rigorous code reviews for vendor deliverables and internal modules, serving as the final sign-off authority before production deployment.</li>
+          </ul>
+        </div>
+        
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-co">Tech Mahindra</span>
+            <span class="exp-date">Jun 2018 – Jun 2020</span>
+          </div>
+          <div class="exp-role">ServiceNow Developer</div>
+          <ul class="exp-desc">
+            <li>Executed platform configuration and custom scripting (Business Rules, Client Scripts, UI Policies) to maintain complex workflows and catalog items.</li>
+            <li>Managed update set migration and deployment processes across development, testing, and production instances.</li>
+            <li>Interfaced directly with clients for daily status updates and performed debugging of production issues to ensure minimal downtime.</li>
+          </ul>
+        </div>
+        
+        <div class="exp-entry">
+          <div class="exp-header">
+            <span class="exp-co">Cognizant</span>
+            <span class="exp-date">May 2014 – May 2018</span>
+          </div>
+          <div class="exp-role">ServiceNow Developer</div>
+          <ul class="exp-desc">
+            <li>Configured and customized core ServiceNow modules including Incident, Change, and Service Catalog management.</li>
+            <li>Developed client scripts, UI policies, and business rules to meet specific business requirements and enhance user experience.</li>
+            <li>Assisted in data import activities and set up scheduled data sources for ongoing system integrations.</li>
+            <li>Collaborated with cross-functional teams to gather requirements and deliver ServiceNow solutions aligned with ITIL best practices.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
